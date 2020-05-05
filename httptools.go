@@ -1,6 +1,7 @@
 package httptools
 
 import (
+	"fmt"
 	"io/ioutil"
 	"net/http"
 )
