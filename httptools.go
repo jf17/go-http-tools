@@ -7,12 +7,12 @@ import (
 )
 
 
-func GetBody(url string) string  {
+func GetBody(url string) string {
 	client := http.Client{}
 	resp, err := client.Get(url)
 	if err != nil {
 		fmt.Println(err)
-		return
+		return ""
 	}
 	defer resp.Body.Close()
 	out, err := ioutil.ReadAll(resp.Body)
